@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/" xmlns:fmt="http://www.ibm.com/dfdl/GeneralPurposeFormat" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions">
+	
+	
+
+    <xsd:import namespace="http://www.ibm.com/dfdl/GeneralPurposeFormat" schemaLocation="./IBMdefined/GeneralPurposeFormat.xsd"/>
+        <xsd:element dfdl:encoding="{$dfdl:encoding}" ibmSchExtn:docRoot="true" name="message">
+    <xsd:complexType>
+      <xsd:sequence dfdl:encoding="{$dfdl:encoding}" dfdl:ref="fmt:GeneralPurposeFormat" dfdl:separator="">
+        <xsd:element dfdl:length="2" dfdl:lengthKind="explicit" name="TypeClient" type="xsd:string"/>
+        <xsd:element dfdl:length="1" dfdl:lengthKind="explicit" name="Modifier" type="xsd:string"/>
+		<xsd:element dfdl:length="6" dfdl:lengthKind="explicit" name="ClientPIN" type="xsd:string"/>
+		<xsd:element dfdl:length="3" dfdl:lengthKind="explicit" name="CusLoc" type="xsd:string"/>
+		
+		<xsd:element dfdl:length="10" dfdl:lengthKind="explicit" name="OrgID" type="xsd:string"/>
+		<xsd:element dfdl:length="6" dfdl:lengthKind="explicit" name="OrgPIN" type="xsd:string"/>
+		<xsd:element dfdl:length="3" dfdl:lengthKind="explicit" name="CusLocOrg" type="xsd:string"/>
+		<xsd:element dfdl:length="10" dfdl:lengthKind="explicit" name="ClientID" type="xsd:string"/>
+		<xsd:element dfdl:length="12" dfdl:lengthKind="explicit" name="INN" type="xsd:string"/>
+		<xsd:element dfdl:length="15" dfdl:lengthKind="explicit" name="OGRN" type="xsd:string"/>
+		<xsd:element dfdl:length="9" dfdl:lengthKind="explicit" name="KPP" type="xsd:string"/>
+		<xsd:element dfdl:length="250" dfdl:lengthKind="explicit" name="ShortName" type="xsd:string"/>
+		<xsd:element dfdl:length="500" dfdl:lengthKind="explicit" name="FullName" type="xsd:string"/>
+		<xsd:element dfdl:length="4" dfdl:lengthKind="explicit" name="KNO" type="xsd:string"/>
+		<xsd:element dfdl:length="9" dfdl:lengthKind="explicit" name="BaseDoc" type="xsd:string"/>
+		<xsd:element dfdl:length="50" dfdl:lengthKind="explicit" name="NumBaseDoc" type="xsd:string"/>
+		<xsd:element dfdl:length="10" dfdl:lengthKind="explicit" name="DateBaseDoc" type="xsd:string"/>
+		<xsd:element dfdl:length="255" dfdl:lengthKind="explicit" name="Login" type="xsd:string"/>
+		<xsd:element dfdl:length="40" dfdl:lengthKind="explicit" name="LastName" type="xsd:string"/>
+		<xsd:element dfdl:length="40" dfdl:lengthKind="explicit" name="FirstName" type="xsd:string"/>
+		<xsd:element dfdl:length="40" dfdl:lengthKind="explicit" name="MiddleName" type="xsd:string"/>
+		<xsd:element dfdl:length="10" dfdl:lengthKind="explicit" name="Group" type="xsd:string"/>
+		<xsd:element dfdl:length="128" dfdl:lengthKind="explicit" name="Position" type="xsd:string"/>
+		<xsd:element dfdl:length="255" dfdl:lengthKind="explicit" name="Email" type="xsd:string"/>
+		<xsd:element dfdl:length="11" dfdl:lengthKind="explicit" name="Phone" type="xsd:string"/>
+		<xsd:element dfdl:length="10" dfdl:lengthKind="explicit" name="SubSystem" type="xsd:string"/>
+		
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+    <xsd:annotation>
+		<xsd:appinfo source="http://www.ogf.org/dfdl/">
+			<dfdl:format encoding="{$dfdl:encoding}" escapeSchemeRef="" ref="fmt:GeneralPurposeFormat"/>
+		</xsd:appinfo>
+	</xsd:annotation>
+	
+
+</xsd:schema>
